@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gut or Heart - World Cup Prediction Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 14px;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .content {
+            padding: 60px 40px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .feature {
+            padding: 30px;
+            background: #f8f9ff;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cta-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        .tech-stack {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9ff;
+            border-radius: 15px;
+        }
+
+        .tech-stack h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .tech-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .tech-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            border: 1px solid #e0e0e0;
+        }
+
+        footer {
+            background: #f0f0f0;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .content {
+                padding: 40px 20px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">⚽❤️</div>
+            <h1>Gut or Heart</h1>
+            <h1 style="font-size: 24px; font-weight: normal;">בטן או לב?</h1>
+            <p class="subtitle">The Fun World Cup Prediction Game</p>
+            <p class="tagline">Social. Simple. Addictive.</p>
+        </header>
+
+        <div class="content">
+            <div class="cta-section">
+                <h2>🎯 Coming Soon!</h2>
+                <p>The most fun way to enjoy the World Cup with your friends and family</p>
+                <a href="https://github.com/amit1339/Gut_Or_Heart" class="btn">View on GitHub</a>
+                <a href="https://github.com/amit1339/Gut_Or_Heart#readme" class="btn btn-secondary">Learn More</a>
+            </div>
+
+            <h2 style="color: #333; margin-bottom: 30px; font-size: 28px;">✨ Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🎴</div>
+                    <h3>Swipe & Predict</h3>
+                    <p>No complex odds. Just swipe left or right to make your predictions with fun visual cards.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">👥</div>
+                    <h3>Social Gaming</h3>
+                    <p>Create teams with friends and family. Compete against each other on the leaderboard.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Colorful UI</h3>
+                    <p>Bright, cheerful design that's nothing like traditional betting apps. Confetti on wins!</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>Pool Rewards</h3>
+                    <p>Optional shared pool system. Winner takes most, runner-up gets second, everyone stays happy.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Quick & Easy</h3>
+                    <p>Make 4 quick swipes per day. No complex calculations or betting experience needed.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🌍</div>
+                    <h3>For Everyone</h3>
+                    <p>Perfect for casual fans, families, and office groups. Soccer knowledge? Optional.</p>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <h3>🛠️ Built With</h3>
+                <div class="tech-items">
+                    <div class="tech-item">React.js</div>
+                    <div class="tech-item">Node.js</div>
+                    <div class="tech-item">Express</div>
+                    <div class="tech-item">PostgreSQL</div>
+                    <div class="tech-item">TypeScript</div>
+                    <div class="tech-item">WebSockets</div>
+                </div>
+            </div>
+
+            <div style="background: #fff3cd; padding: 20px; border-radius: 10px; margin: 30px 0; border-left: 4px solid #ffc107;">
+                <strong style="color: #856404;">🚧 Status:</strong>
+                <p style="color: #856404; margin-top: 8px;">Project in active development. Contribute or follow progress on <a href="https://github.com/amit1339/Gut_Or_Heart" style="color: #0066cc;">GitHub</a>!</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ by Amit | <a href="https://github.com/amit1339/Gut_Or_Heart">GitHub</a> | <a href="https://github.com/amit1339/Gut_Or_Heart#readme">Documentation</a></p>
+            <p style="margin-top: 15px; font-size: 12px;">© 2026 Gut or Heart. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
