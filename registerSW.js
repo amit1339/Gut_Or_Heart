@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/GoalFriend/sw.js', { scope: '/GoalFriend/' })})}
