@@ -91,7 +91,7 @@ function App() {
     <div className="app-container">
       <header className="app-header">
         <div className="app-logo">
-          <span className="app-logo-icon">🎯</span>
+          <img src="/logo.png" alt="GoalFriend Logo" className="app-logo-img" />
           <span className="app-logo-text">GoalFriend</span>
         </div>
         <button className="header-avatar" onClick={() => setCurrentPage('profile')} style={{ padding: user.avatar?.startsWith('http') ? 0 : undefined, overflow: 'hidden' }}>
