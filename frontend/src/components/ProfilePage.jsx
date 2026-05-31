@@ -79,7 +79,7 @@ export default function ProfilePage({ user, onLogout }) {
           {intuitionTitle}
         </span>
         <span style={{ fontSize: 12, color: 'var(--text-secondary)', marginTop: 8 }}>
-          הצטרף למשחק ב: {new Date(user.createdAt).toLocaleDateString('he-IL')}
+          הצטרף למשחק ב: {user.createdAt ? new Date(user.createdAt).toLocaleDateString('he-IL') : new Date().toLocaleDateString('he-IL')}
         </span>
       </div>
 

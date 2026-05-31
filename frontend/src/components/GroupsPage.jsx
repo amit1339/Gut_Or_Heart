@@ -214,7 +214,20 @@ export default function GroupsPage({ user, onOpenGroup }) {
                       <span className={`rank r${index + 1}`}>
                         {index === 0 ? '🥇' : index === 1 ? '🥈' : '🥉'}
                       </span>
-                      <span style={{ fontSize: 16, marginLeft: 4 }}>{leader.avatar}</span>
+                      <span style={{ 
+                        width: 24, height: 24, 
+                        borderRadius: '50%', 
+                        display: 'inline-flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'center', 
+                        fontSize: 14, 
+                        marginLeft: 6, 
+                        background: 'rgba(0,0,0,0.05)', 
+                        overflow: 'hidden', 
+                        flexShrink: 0 
+                      }}>
+                        {renderAvatar(leader.avatar)}
+                      </span>
                       <span className="name">{leader.name}</span>
                       <span className="score" style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                         {leader.score} נק׳

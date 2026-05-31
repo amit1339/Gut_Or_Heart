@@ -50,7 +50,7 @@ export const api = {
       console.warn('Google login error:', popupErr.message);
       // Local fallback
       const userId = 'u_' + Math.random().toString(36).substr(2, 9);
-      const userData = { id: userId, name: 'משתמש (טסט)', avatar: '😎', score: 0, streak: 0, bestStreak: 0, correct: 0, total: 0, groups: [] };
+      const userData = { id: userId, name: 'משתמש (טסט)', avatar: '😎', score: 0, streak: 0, bestStreak: 0, correct: 0, total: 0, groups: [], createdAt: new Date().toISOString() };
       localStorage.setItem('gut_or_heart_user', JSON.stringify(userData));
       return userData;
     }
