@@ -66,7 +66,8 @@ body {
 }
 
 .app-logo { display: flex; align-items: center; gap: 8px; }
-.app-logo-icon { font-size: 28px; }
+.app-logo-icon { font-size: 28px; display: flex; align-items: center; }
+.app-logo-img { width: 32px; height: 32px; object-fit: contain; }
 .app-logo-text {
   font-size: 20px;
   font-weight: 800;
@@ -473,6 +474,7 @@ body {
   min-height: 100vh; text-align: center; padding: 20px;
 }
 .welcome-emoji { font-size: 80px; margin-bottom: 16px; animation: bounce 2s infinite; }
+.welcome-logo { width: 100px; height: 100px; object-fit: contain; margin-bottom: 16px; animation: bounce 2s infinite; filter: drop-shadow(0 8px 24px rgba(124, 58, 237, 0.4)); }
 .welcome-title { font-size: 36px; font-weight: 900; margin-bottom: 8px; background: var(--gradient-fun); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .welcome-subtitle { font-size: 16px; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6; max-width: 320px; }
 

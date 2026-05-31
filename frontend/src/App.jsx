@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './index.css';
+import logoImg from './assets/logo.png';
 import { api } from './api';
 import WelcomePage from './components/WelcomePage';
 import SwipePage from './components/SwipePage';
@@ -91,7 +92,9 @@ function App() {
     <div className="app-container">
       <header className="app-header">
         <div className="app-logo">
-          <span className="app-logo-icon">🎯</span>
+          <span className="app-logo-icon">
+            <img src={logoImg} alt="GoalFriend Logo" className="app-logo-img" />
+          </span>
           <span className="app-logo-text">GoalFriend</span>
         </div>
         <button className="header-avatar" onClick={() => setCurrentPage('profile')} style={{ padding: user.avatar?.startsWith('http') ? 0 : undefined, overflow: 'hidden' }}>

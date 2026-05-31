@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
+import logoImg from '../assets/logo.png';
 
 const AVATARS = ['😎', '🤩', '🥳', '😜', '🤠', '🦁', '🐯', '🦊', '🐸', '🎃', '👻', '🤖', '👑', '⚡', '🔥', '💎'];
 
@@ -14,7 +15,7 @@ export default function WelcomePage({ onRegister }) {
 
   return (
     <div className="welcome-page">
-      <div className="welcome-emoji">⚽</div>
+      <img src={logoImg} alt="GoalFriend Logo" className="welcome-logo" />
       <h1 className="welcome-title">GoalFriend</h1>
       <p className="welcome-subtitle">
         המשחק החברתי של המונדיאל!
